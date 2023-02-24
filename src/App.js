@@ -1,11 +1,19 @@
 import './App.css';
-import FormQuiz from './components/FormQuiz';
-import Trivia from './components/Trivia';
+import { Routes, Route } from 'react-router-dom';
+import Trivia from './routes/Trivia';
+import Login from './routes/Login';
+import Nav from './routes/Nav';
+
 
 function App() {
   return (
     <div className="App">
-      <Trivia></Trivia>
+      <Routes>
+         <Route  path="/" element={<Nav />}> 
+          <Route path="/login" element={<Login />} />
+          <Route path="/trivia" element={<Trivia/>} />
+        </Route>
+      </Routes>  
     </div>
   );
 }

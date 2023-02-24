@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import FormQuiz from "./FormQuiz";
-import CardQuiz from "./CardQuiz";
+import FormQuiz from "../components/FormQuiz";
+import CardQuiz from "../components/CardQuiz";
 import { getTrivia } from "../service";
 
 
@@ -26,7 +26,7 @@ const Trivia = () => {
   return (
     <div>
       <FormQuiz onChangeData={handleChange}></FormQuiz>
-      {trivia ? <CardQuiz question={question}></CardQuiz> : "No hay info"}
+      {trivia ? <CardQuiz question={question}></CardQuiz> : ""}
     </div>
 
   )

@@ -10,7 +10,6 @@ const FormQuiz = ({ onChangeData }) => {
 
 
   const handleInputChange = (event) => {
-
     setData({
       ...data,
       [event.target.name]: event.target.value
@@ -84,6 +83,8 @@ const FormQuiz = ({ onChangeData }) => {
           onChange={handleInputChange}
 
         />
+        <span>{data.limit}</span> 
+        <br></br>
         <button type="submit" >Jugar </button>
       </form>
 
