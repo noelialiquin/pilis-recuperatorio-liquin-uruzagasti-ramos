@@ -1,41 +1,63 @@
 import React from "react";
+import { useState } from "react";
 
 const CardQuiz = ({ question }) => {
 
+  const [puntuacion, setPuntuación] = useState(0);
+  const [areDisabled, setAreDisabled] = useState(false);
 
-  return (
-    <>
-      <div className="card-trivia-container">
-        <div className="display-card">
-         
-          {
-            question.map((question =>
-              <div>
-                <h3>{question.question}</h3>
-                <div>
-                  <input type="checkbox" id="correct" name="correctAnswer" value=""></input>
-                  <label  name="correctAnswer">{question.correctAnswer}</label> <br></br>
+
+    const handleAnswerSubmit = (correctAnswer, e)=> {
+    if (correctAnswer) setPuntuación(puntuacion + 1);
+     
+    }
+
+
+    return(
+      <>
+        <div className="card-trivia-container">
+          <div className="display-card">
+
+        {question.map((question =>
+           <div>
+             <h3>{question.question}</h3>
+             <div>
+                  <button disabled={areDisabled} key={question.correctAnswer} onClick={(e) => handleAnswerSubmit(question.correctAnswer, e)}>
+                  {question.correctAnswer}
+                    </button>
+                    <br></br>
 
                   {question.incorrectAnswers.map(incorrect =>
-                    <><input type="checkbox" id="incorrect" name="incorrectAnswers" value=""></input>
-                      <label  name="incorrectAnswers">{incorrect}</label> <br></br>
-
-                    </>
-
-                  )}
+                  
+                  <>  <button disabled={areDisabled} key={incorrect} >
+                     {incorrect}
+                    </button>              </>    
+                  )
+                  } 
+                  
+                  <br></br>
                 </div>
 
-              </div>)
-            )
-          }
+                
+              </div>
+              
+              )
+
+
+              )
+
+              
+              }
+                    {question ? <span> Puntuacion {puntuacion} de {question.length}</span> : " "}
+
+          </div>
+         
         </div>
-
-      </div>
-
-    </>
-
-
-  )
-}
-
-export default CardQuiz;
+      
+      </>
+  
+  
+    )
+  }
+  
+  export default CardQuiz;

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import FormQuiz from "../components/FormQuiz";
 import CardQuiz from "../components/CardQuiz";
-import { getTrivia } from "../service";
+import {getTrivia} from "../service";
 
 
 const Trivia = () => {

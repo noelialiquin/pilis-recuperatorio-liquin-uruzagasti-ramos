@@ -28,9 +28,9 @@ const FormQuiz = ({ onChangeData }) => {
     <>
       <h1>TRIVIA</h1>
       <form onSubmit={dataTrivia}>
-        <label>Categoria</label><br></br>
+        <label>Category</label><br></br>
         <select type="text" name="category" className="drop-cat" onChange={handleInputChange}>
-          <option value="">-- Elija una opcion --</option>
+        
           <option value="arts_and_literature">Arts & Literature</option>
           <option value="film_and_Tv">Film & TV</option>
           <option value="food_and_drink">Food & Drink</option>
@@ -44,11 +44,11 @@ const FormQuiz = ({ onChangeData }) => {
         </select>
 
 
-        <label>Dificultad</label><br></br>
+        <label>Diffculty</label><br></br>
         <input
           type="radio"
           name="difficulty"
-          className="rad_1"
+          className="radio-form"
           value="easy"
           onChange={handleInputChange}
 
@@ -58,7 +58,7 @@ const FormQuiz = ({ onChangeData }) => {
         <input
           type="radio"
           name="difficulty"
-          className="rad_1"
+          className="radio-form"
           value="medium"
           onChange={handleInputChange}
         />
@@ -67,17 +67,17 @@ const FormQuiz = ({ onChangeData }) => {
         <input
           type="radio"
           name="difficulty"
-          className="rad_1"
+          className="radio-form"
           value="hard"
           onChange={handleInputChange}
         />
         <label>Hard</label><br></br>
 
-        <label ></label>
+        <label >Limit</label>
         <input
           type="range"
           name="limit"
-          className="limit"
+          className="rng-limit"
           min="1"
           max="20"
           onChange={handleInputChange}

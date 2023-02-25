@@ -44,7 +44,7 @@ const Login = () => {
           }
         />
         <p>{errors.password?.message}</p>
-        <button className='btn-login' type='submit'>Iniciar Sesión</button>
+        <button className='btn-login' type='submit'>Sign in</button>
       </form>
     </div>
   );

@@ -21,6 +21,7 @@ const Nav = () => {
   return (
     <>
       <div className='nav'>
+        <p>holla</p>
         {/* <Link className='logo-container' to='/'> */}
         <img src="" alt='TriviaLogo' className='trivia' />
         {/* </Link> */}
@@ -31,12 +32,12 @@ const Nav = () => {
 
           {user ? (
             <Link className='nav-link' to="/" onClick={handleSignOut}>
-              Cerrar Sesión
+              Logout
             </Link>
 
           ) : (
             <Link className='nav-link sign-in' to='/login'>
-              Iniciar Sesión
+              Sign in
             </Link>
           )}
         </div>
