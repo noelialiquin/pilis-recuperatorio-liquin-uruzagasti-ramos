@@ -18,33 +18,32 @@ const Login = () => {
 
   return (
 
-    <div className='login-container'>
+    <div className="login-container">
       <h2>Inicia sesion para comenzar a Jugar</h2>
-      <form className='login-form' onSubmit={handleSubmit(onSubmit)}>
+      <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
         <input
-          className='input-form'
+          className="input-form"
           type="text"
-          placeholder='Nombre de usuario'
-          {...register('username', {
-            required: 'Ingrese su nombre de usuario'
+          placeholder="Nombre de usuario"
+          {...register("username", {
+            required: "Ingrese su nombre de usuario"
           }
           )
           } />
         <p>{errors.username?.message}</p>
         <input
-          className='input-form'
-          type='password'
-          placeholder='Contraseña'
+          className="input-form"
+          type="password"
+          placeholder="Contraseña"
           {...register(
-            'password',
+            "password",
             {
-              required: 'Ingrese su contraseña'
-            }
-          )
+              required: "Ingrese su contraseña"
+            })
           }
         />
         <p>{errors.password?.message}</p>
-        <button className='btn-login' type='submit'>Sign in</button>
+        <button className="btn-login" type="submit">Sign in</button>
       </form>
     </div>
   );

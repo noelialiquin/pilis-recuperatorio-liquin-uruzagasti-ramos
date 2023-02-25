@@ -44,34 +44,38 @@ const FormQuiz = ({ onChangeData }) => {
         </select>
 
 
-        <label>Diffculty</label><br></br>
+        <label > Diffculty</label><br></br>
         <input
           type="radio"
+          id="d-r1"
           name="difficulty"
           className="radio-form"
           value="easy"
+          
           onChange={handleInputChange}
-
+          checked
         />
-        <label>Easy</label> <br></br>
+        <label for="d-r1">Easy</label> <br></br>
 
         <input
           type="radio"
+          id="d-r2"
           name="difficulty"
           className="radio-form"
           value="medium"
           onChange={handleInputChange}
         />
-        <label>Medium</label><br></br>
+        <label for="d-r2">Medium</label><br></br>
 
         <input
           type="radio"
+          id="d-r3"
           name="difficulty"
           className="radio-form"
           value="hard"
           onChange={handleInputChange}
         />
-        <label>Hard</label><br></br>
+        <label for="d-r3">Hard</label><br></br>
 
         <label >Limit</label>
         <input

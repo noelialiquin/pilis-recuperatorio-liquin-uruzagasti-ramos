@@ -13,7 +13,7 @@ try {
   return triviaData;
 
 } catch {
-  throw new Error('could not data trivia');
+  throw new Error("could not data trivia");
 }
 
 }
